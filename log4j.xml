@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %5p [%c] %m%n" />
+        </Console>
+    </Appenders>
+    <!-- <appender name="console" class="org.apache.log4j.FileAppender">
+        <param name="Encoding" value="UTF-8" />
+  <param name="File" value="D:/site.log" />
+        <param name="ImmediateFlush" value="true" />
+        <param name="Append" value="true" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %5p [%c] %m%n" />
+        </layout>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %5p [%c] %m%n" />
+        </Console>
+    </appender> -->
+    <Loggers>
+        <Logger name="(net.icnslab.netcg.core.BrokerManager" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <Root level="DEBUG">
+            <AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
